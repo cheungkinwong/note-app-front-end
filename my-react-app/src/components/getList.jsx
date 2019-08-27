@@ -1,18 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 const Notes = () => {
-     const [hasError, setErrors] = useState(false);
      const [notesJson, setNotes] = useState([]);
 
      useEffect(() => {
           async function fetchData() {
-               axios.get("http://127.0.0.1//exercise/becode-database-api/list_note.php")
-                    .then(res => {
-                         setNotes(res.data.notes);
-                    })
-                    .catch(err => {
-                         setErrors(err);
-                    });
+               axios.get("http://127.0.0.1//exercise/becode-database-api/list_note.php").then(res => {
+                    setNotes(res.data.notes);
+               });
           }
           fetchData();
      }, []);
