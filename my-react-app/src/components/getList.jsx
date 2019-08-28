@@ -11,7 +11,7 @@ const Notes = () => {
                });
           }
           fetchData();
-     }, []);
+     });
 
      return (
           <div className="board">
@@ -19,10 +19,10 @@ const Notes = () => {
                     <div key={item.title + item.author + item.last_updated} className="sticky">
                          <div className="button">
                               <button className="edit" onClick={editNote.bind(this, item.title, item.author, item.last_updated)}>
-                                   <i class="far fa-edit"></i>
+                                   <i className="far fa-edit"></i>
                               </button>
                               <button className="delete" onClick={deleteNote.bind(this, item.title, item.author, item.last_updated)}>
-                                   <i class="far fa-trash-alt"></i>
+                                   <i className="far fa-trash-alt"></i>
                               </button>
                          </div>
                          <div className="content">
