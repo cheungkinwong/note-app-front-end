@@ -22,18 +22,21 @@ const useSubmitForm = () => {
      return (
           <div className="AddNote">
                <form onSubmit={handleSubmit} method="POST">
-                    <label htmlFor="title">
+                    <label htmlFor="title" className="title">
                          Title:
+                         <br />
                          <input name="title" onChange={handleInputChange} value={inputs.title} required />
                     </label>
                     <br />
-                    <label htmlFor="author">
+                    <label htmlFor="author" className="title">
                          Author:
+                         <br />
                          <input name="author" onChange={handleInputChange} value={inputs.author} required />
                     </label>
                     <br />
-                    <label htmlFor="note">
+                    <label htmlFor="note" className="title">
                          Note:
+                         <br />
                          <textarea name="note" onChange={handleInputChange} value={inputs.note} required />
                     </label>
                     <br />
